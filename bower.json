@@ -2,7 +2,7 @@
   "name": "The Unit Baseplate",
   "version": "0.0.0",
   "authors": [
-    "Ross D<ross.dowthwaite@theunit.co.uk>",
+    "Ross D <ross.dowthwaite@theunit.co.uk>"
   ],
   "license": "MIT",
   "private": true,
@@ -14,6 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~1.11.3",
+    "jquery": "~1.11.3"
   }
 }
