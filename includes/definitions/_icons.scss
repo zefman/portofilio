@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #PATTERNS
+
+    Dependancies:
+
+\*------------------------------------*/
+
+@font-face {
+  	font-family: 'fdlt';
+  	src: url( '#{$font-path}/fdlt.eot' );
+  	src: url( '#{$font-path}/fdlt.eot?#iefix' ) format( 'embedded-opentype' ),
+    	 url( '#{$font-path}/fdlt.woff' ) format( 'woff' ),
+    	 url( '#{$font-path}/fdlt.ttf' ) format( 'truetype' ),
+    	 url( '#{$font-path}/fdlt.svg#fdlt' ) format( 'svg' );
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+    @include adjust-font-size-to( $base-font-size, 1.4 );
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    float: right;
+    text-transform: none;
+    font-family: 'fdlt';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate( 0, -2px );
+}
+
+
+
+
+/* Paste Exported Definitions here */
+// Change before to after after pasting it in
+.icon-lock:after {
+  content: "a";
+}
+.icon-arrow:after {
+  content: "b";
+}
+/* Stop pasting! */

@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #DECORATION
+
+    Dependancies: settings/variables
+
+\*------------------------------------*/
+
+
+// Fidelity colour backgrounds: bg-categoryname
+@each $colour in $fidelity-colours {
+
+    .bg-#{ nth( $colour, 1 ) } {
+    	background: #{ nth( $colour, 2 ) };
+    }
+}
+
+
+
+// Border radius variations
+.br   { border-radius: $border-radius; }
+.br-t { border-radius: $border-radius $border-radius 0 0; }
+.br-r { border-radius: 0 $border-radius $border-radius 0; }
+.br-b { border-radius: 0 0 $border-radius $border-radius; }
+.br-l { border-radius: $border-radius 0 0 $border-radius; }
+.br-bl { border-radius: 0 0 0 $border-radius; }
+.br-br { border-radius: 0 0 $border-radius 0; }
