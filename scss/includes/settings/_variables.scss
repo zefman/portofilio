@@ -69,15 +69,15 @@ $site-colours: (
 
 // Darkened colours array
 $site-colours-hover: (
-	"brand-primary"  	: darken( $brand-primary, 5% ),
-	"brand-secondary"  	: darken( $brand-secondary, 5% ),
-	"white"				: darken( $white, 5% ),
-	"black"				: lighten( $black, 5% ),
-	"grey"				: lighten( $grey, 5%),
-	"site-success"		: darken( $site-success, 5% ),
-	"site-warning"		: darken( $site-warning, 5% ),
-	"site-error"		: darken( $site-error, 5% ),
-	"link"				: darken( $text-colour-link, 5% )
+	"brand-primary"  	: darken( $brand-primary, 10% ),
+	"brand-secondary"  	: darken( $brand-secondary, 10% ),
+	"white"				: darken( $white, 10% ),
+	"black"				: lighten( $black, 10% ),
+	"grey"				: lighten( $grey, 10%),
+	"site-success"		: darken( $site-success, 10% ),
+	"site-warning"		: darken( $site-warning, 10% ),
+	"site-error"		: darken( $site-error, 10% ),
+	"link"				: darken( $text-colour-link, 10% )
 );
 
 // Compass includes
