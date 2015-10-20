@@ -1,7 +1,7 @@
 {
-  "name": "coop_cover_checker",
+  "name": "scss_template",
   "version": "1.0.0",
-  "description": "cover checker",
+  "description": "The Unit SCSS Base",
   "main": "index.html",
   "dependencies": {
     "browser-sync": "^2.8.2",
@@ -21,14 +21,11 @@
     "gulp-serve": "^1.1.0",
     "gulp-uglify": "^1.4.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://rossdowthwaite@bitbucket.org/theunitdev/co-op_cover_checker.git"
+    "url": "git@bitbucket.org:theunitdev/the-unit-scss-base.git"
   },
-  "author": "",
+  "author": "The Unit",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/theunitdev/co-op_cover_checker#readme"
+  "homepage": "https://bitbucket.org/theunitdev/the-unit-scss-base"
 }

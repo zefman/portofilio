@@ -17,13 +17,13 @@ var browserSync  = require( 'browser-sync').create();   // https://www.npmjs.com
 // var minifyHTML   = require( 'gulp-minify-html');
 
 // Concatenate vendor css into one file
-gulp.task( 'vendorjs', function() {
-  return gulp.src( ['./bower_components/jquery/dist/jquery.min.js',
-                    ])
-    .pipe( concat( 'vendor.js' ) )
-    .pipe( gulp.dest( './js/' ) )
-    .pipe( browserSync.stream() );
-} );
+// gulp.task( 'vendorjs', function() {
+//   return gulp.src( ['./bower_components/jquery/dist/jquery.min.js',
+//                     ])
+//     .pipe( concat( 'vendor.js' ) )
+//     .pipe( gulp.dest( './js/' ) )
+//     .pipe( browserSync.stream() );
+// } );
 
 
 // Compile sass into CSS & auto-inject into browsers
@@ -42,7 +42,7 @@ gulp.task( 'compass', function() {
 });
 
 // Create a local server
-gulp.task( 'serve', [ 'compass', 'vendorjs' ], function() {
+gulp.task( 'serve', [ 'compass'], function() {
     browserSync.init( {
         server: {
             baseDir: "./"
@@ -92,4 +92,4 @@ gulp.task( 'serve', [ 'compass', 'vendorjs' ], function() {
 //         .pipe( gulp.dest( './dist' ) );
 // } );
 
-gulp.task( 'default', [ 'compass', 'vendorjs', ] );
+gulp.task( 'default', [ 'compass' ] );
