@@ -42,6 +42,7 @@ gulp.task( 'serve', [ 'css'], function() {
 
     gulp.watch( "./scss/**/*.scss", [ 'css' ] );
     gulp.watch( "./scss/**/*.scss" ).on( 'change', browserSync.reload );
+    gulp.watch( "./*.html" ).on( 'change', browserSync.reload );
 } );
 
 gulp.task( 'default', [ 'css' ] );

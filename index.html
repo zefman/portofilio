@@ -4,351 +4,454 @@
     <title>The Unit SCSS Baseplate</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
     <div class="site-wrapper">
+        
         <div class="site-content">
-        	<div class="contented rhythmic rhythm-m-4">
+        	<div class="contented">
+
+                <h1 class="h1 rhythmic-xxl">The Unit SCSS Baseplate</h1>
+
+                <ul class="list  rhythm-m-2">
+                    <li class="list__item"><a href="#settings" class="text-link text-link--brand-primary">Settings</a></li>
+                    <li class="list__item"><a href="#the-grid" class="text-link text-link--brand-primary">The Grid</a></li>
+                    <li class="list__item"><a href="#colours" class="text-link text-link--brand-primary">Colours</a></li>
+                    <li class="list__item"><a href="#typography" class="text-link text-link--brand-primary">Typography</a></li>
+                    <li class="list__item"><a href="#links" class="text-link text-link--brand-primary">Links</a></li>
+                    <li class="list__item"><a href="#inputs" class="text-link text-link--brand-primary">Inputs</a></li>
+                    <li class="list__item"><a href="#buttons" class="text-link text-link--brand-primary">Buttons</a></li>
+                    <li class="list__item"><a href="#helpers" class="text-link text-link--brand-primary">Helpers</a></li>
+                </ul>
 
 
-        		<h1 class="h1--big rhythmic rhythm-m-1">The grid</h1>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-1/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-3/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-3/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-3/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-3/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-4/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-4/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-4/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-5/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div><!--
-        			--><div class="grid__item width-7/12">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-2">
-        			<div class="grid__item width-1/1">
-        				<div class="block bg-grey-15 rhythmic"></div>
-        			</div>
-        		</div>
+                <div id="settings" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1 rhythmic rhythm-m-1/2">Settings</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted">
+                    </div><!-- /.block -->
+                    
+                </div><!-- /#settings -->
 
 
-        		<h1 class="h1--big rhythmic rhythm-m-1">Colours</h1>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-grey-85 rhythmic text-white text-center">Grey 85</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-grey-60 rhythmic text-white text-center">Grey 60</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-grey-25 rhythmic text-center">Grey 25</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-grey-15 rhythmic text-center">Grey 15</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-grey-03 rhythmic text-center">Grey 03</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-white rhythmic text-center">White</div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-orange-1 rhythmic text-white text-center">Orange 1</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-orange-2 rhythmic text-white text-center">Orange 2</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-orange-3 rhythmic text-white text-center">Orange 3</div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-blue-1 rhythmic text-white text-center">Blue 1</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-blue-2 rhythmic text-white text-center">Blue 2</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-blue-3 rhythmic text-white text-center">Blue 3</div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-red-1 rhythmic text-white text-center">Red 1</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-red-2 rhythmic text-white text-center">Red 2</div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-1">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-green-1 rhythmic text-white text-center">Green 1</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-green-2 rhythmic text-white text-center">Green 2</div>
-        			</div>
-        		</div>
-        		<div class="grid rhythm-m-2">
-        			<div class="grid__item width-1/6">
-        				<div class="block bg-yellow-1 rhythmic text-white text-center">Yellow 1</div>
-        			</div><!--
-        			--><div class="grid__item width-1/6">
-        				<div class="block bg-yellow-2 rhythmic text-center">Yellow 2</div>
-        			</div>
-        		</div>
+                <div id="the-grid" class="rhythmic rhythm-m-5">
 
+                    <h2 class="h1 rhythmic rhythm-m-1/2">The Grid</h2>
 
-        		<h1 class="h1--big rhythmic rhythm-m-1">Typography</h1>
-        		<h1 class="h1 rhythm-m-0-half">Header 1</h1>
-        		<h2 class="h2 rhythm-m-0-half">Header 2</h2>
-        		<h3 class="h3 rhythm-m-0-half">Header 3</h3>
-        		<h4 class="h4 rhythm-m-1-half">Header 4</h4>
-        		<div class="grid rhythm-m-2">
-        			<div class="grid__item width-1/2">
-        				<p class="rhythm-m-1-half">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        				<p class="p rhythm-m-1-half">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        				<p class="ps">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        			</div>
-        		</div>
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                        <p class="ps  gutted  rhythm-m-1-half  bg-black  text-white  rhythmic-xs">scss / includes / layout / grid</p>
+                        <p class="rhythm-m-1-half">The base grid uses the <a href="https://github.com/csswizardry/csswizardry-grids" class="text-link text-link--brand-primary" target="_blank">css wizardry grid</a>.</p>
+                        <p class="rhythm-m-0">Each row is defined by an element with the <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.grid</span> class. Directly followed by each column, defined as <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.grid__item</span>, using a <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.width-xx/xx</span> class to define its width. Every column needs to be separated by an <a href="https://github.com/csswizardry/csswizardry-grids#user-content-classes-in-markup" class="text-link text-link--brand-primary" target="_blank">in-line HTML comment</a>.</p>
+                    </div><!-- /.block -->
 
+                    <h3 class="h3 rhythmic rhythm-m-1">The Grid: Desktop</h3>
 
-                <h1 class="h1--big rhythmic rhythm-m-1">Links</h1>
-                <div class="rhythm-m-1">
-                    <a href="#" class="text-link">Default Text Link</a>
-                    <a href="#" class="text-link text-link--blue-3 gutted-m-left-l">Text Link Blue 3</a>
-                    <a href="#" class="text-link text-link--red-1 text-link--underline--green-1 gutted-m-left-l">Red 1 Underline Green 1</a>
-                    <a href="#" class="text-link text-link--orange-1 text-link--no-underline gutted-m-left-l">Orange 1 No Underline</a>
-                    <a href="#" class="text-link text-link--grey-60 text-link--underline gutted-m-left-l">Grey 60 Underline</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="p text-link text-link--divided">Divided Link 1</a>
-                    <a href="#" class="p text-link gutted-m-left-xs text-link--divided">Divided Link 2</a>
-                    <a href="#" class="p text-link gutted-m-left-xs">Divided Link 3</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="ps text-link text-link--blue-1 text-link--divided">Divided Link 1 Blue 1</a>
-                    <a href="#" class="ps text-link text-link--blue-1 gutted-m-left-xs text-link--divided">Divided Link 2 Blue 1</a>
-                    <a href="#" class="ps text-link text-link--blue-1 gutted-m-left-xs">Divided Link 3 Blue 1</a>
-                </div>
+                    <div class="grid  rhythm-m-1">
+                        <div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-1/12">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
 
+                    <div class="grid  rhythm-m-1">
+                        <div class="grid__item width-3/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-3/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-3/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-3/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
 
-                <h1 class="h1--big rhythmic rhythm-m-1">Inputs</h1>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="h1 text-blue-3 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Blue 3 Set Value" placeholder="Placeholder">
+                    <div class="grid  rhythm-m-1">
+                        <div class="grid__item width-4/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-4/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-4/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
+
+                    <div class="grid  rhythm-m-1">
+                        <div class="grid__item width-5/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item width-7/12">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
+
+                    <div class="grid  rhythm-m-2">
+                        <div class="grid__item width-1/1">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
+
+                    <h3 class="h3 rhythmic rhythm-m-1/2">The Grid: Desktop &gt; Tablet</h3>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                        <p class="ps  gutted  rhythm-m-1-half  bg-black  text-white  rhythmic-xs">scss / includes / settings / variables</p>
+                        <p class="rhythm-m-1-half">Dropping the grid at different breakpoints uses prefixed modifying width classes. These breakpoints are stored in a <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">$breakpoints</span> array in the variables file.</p>
+                        <p class="rhythm-m-0">For example, adding <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.tablet-width-xx/xx</span> to <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.grid__item</span> will cause that column to change to its new width when the viewport is within a "tablet" size.</p>
+                    </div><!-- /.block -->
+
+                    <div class="grid  rhythm-m-2">
+                        <div class="grid__item  width-4/12  tablet-width-1/1 tablet-rhythm-m-1">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-4/12  tablet-width-1/1 tablet-rhythm-m-1">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-4/12  tablet-width-1/1 tablet-rhythm-m-1">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="h2 text-green-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Green 1 Set Value" placeholder="Placeholder">
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="h3 text-red-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Red 1 Set Value" placeholder="Placeholder">
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="h4 text-orange-2 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Orange 2 Set Value" placeholder="Placeholder">
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="text-grey-60 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Grey 60 Set Value" placeholder="Placeholder">
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-1">
-                        <input type="text" class="text-yellow-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" placeholder="Form Input Yellow 1 Placeholder">
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="grid__item width-1/2 rhythm-m-2">
-                        <input type="text" class="gutted-s rhythmic-xxs rhythm-p-2-top--s form-input" placeholder="Default input">
-                    </div>
-                </div>
+
+                    <h3 class="h3 rhythmic rhythm-m-1/2">The Grid: Desktop &gt; Tablet &gt; Mobile</h3>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                        <p class="rhythm-m-0">The same modifying class works for mobile, adding <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.mobile-width-xx/xx</span> will cause it to change size at the defined "mobile" width.</p>
+                    </div><!-- /.block -->
+
+                    <div class="grid">
+                        <div class="grid__item  width-3/12  tablet-width-1/2 tablet-rhythm-m-1  mobile-width-1/1">
+                            <div class="block bg-grey rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-3/12  tablet-width-1/2 tablet-rhythm-m-1  mobile-width-1/1">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-3/12  tablet-width-1/2 tablet-rhythm-m-1  mobile-width-1/1">
+                            <div class="block  bg-grey  rhythmic"></div>
+                        </div><!--
+                        --><div class="grid__item  width-3/12  tablet-width-1/2 tablet-rhythm-m-1  mobile-width-1/1">
+                                <div class="block  bg-grey  rhythmic"></div>
+                        </div>
+                    </div><!-- /.grid -->
+
+                </div><!-- /#the-grid -->
 
 
-                <h1 class="h1--big rhythmic rhythm-m-1">Buttons</h1>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default">Default Button</a>
-                    <a href="#" class="btn btn--default btn--upper">Uppercase Button</a>
-                    <button class="btn btn--default" disabled>Disabled Button</button>
-                    <a href="#" class="btn btn--default btn--transparent">Transparent Button</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--grey-85">Button Grey 85</a>
-                    <a href="#" class="btn btn--default btn--grey-60">Button Grey 60</a>
-                    <a href="#" class="btn btn--default btn--grey-25">Button Grey 25</a>
-                    <a href="#" class="btn btn--default btn--grey-15">Button Grey 15</a>
-                    <a href="#" class="btn btn--default btn--grey-03">Button Grey 03</a>
-                    <a href="#" class="btn btn--default btn--white">Button White</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--orange-1">Button Orange 1</a>
-                    <a href="#" class="btn btn--default btn--orange-2">Button Orange 2</a>
-                    <a href="#" class="btn btn--default btn--orange-3">Button Orange 3</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--blue-1">Button Blue 1</a>
-                    <a href="#" class="btn btn--default btn--blue-2">Button Blue 2</a>
-                    <a href="#" class="btn btn--default btn--blue-3">Button Blue 3</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--red-1">Button Red 1</a>
-                    <a href="#" class="btn btn--default btn--red-2">Button Red 2</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--green-1">Button Green 1</a>
-                    <a href="#" class="btn btn--default btn--green-2">Button Green 2</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="btn btn--default btn--yellow-1">Button Yellow 1</a>
-                    <a href="#" class="btn btn--default btn--yellow-2">Button Yellow 2</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--blue-2 btn--transparent">Transparent Blue 2</a>
-                    <a href="#" class="btn btn--default btn--green-1 btn--transparent">Transparent Green 1</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--blue-2 icon icon-arrow">Icon</a>
-                    <a href="#" class="btn btn--default btn--green-1 icon icon-arrow">Icon</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--blue-2 icon icon--large icon-arrow">Icon Large</a>
-                    <a href="#" class="btn btn--default btn--green-1 icon icon--large icon-arrow">Icon Large</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="btn btn--default btn--blue-2 btn--transparent icon icon-arrow">Transparent Icon</a>
-                    <a href="#" class="btn btn--default btn--green-1 btn--transparent icon icon-arrow">Transparent Icon</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--small btn--blue-1">Button Small</a>
-                    <a href="#" class="btn btn--default btn--small btn--blue-2">Button Small</a>
-                    <a href="#" class="btn btn--default btn--small btn--blue-3">Button Small</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--small btn--transparent btn--blue-2">Transparent Small</a>
-                    <a href="#" class="btn btn--default btn--small btn--transparent btn--green-1">Transparent Small</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--small btn--blue-2 icon icon-lock">Small Icon</a>
-                    <a href="#" class="btn btn--default btn--small btn--green-1 icon icon-lock">Small Icon</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="btn btn--default btn--small btn--transparent btn--blue-2 icon icon-lock">Small Transparent Icon</a>
-                    <a href="#" class="btn btn--default btn--small btn--transparent btn--green-1 icon icon-lock">Small Transparent Icon</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--large btn--blue-1">Button Large</a>
-                    <a href="#" class="btn btn--default btn--large btn--blue-2">Button Large</a>
-                    <a href="#" class="btn btn--default btn--large btn--blue-3">Button Large</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2">Transparent Large</a>
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1">Transparent Large</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--large btn--blue-2 icon icon-lock">Large Icon</a>
-                    <a href="#" class="btn btn--default btn--large btn--green-1 icon icon-lock">Large Icon</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2 icon icon-lock">Large Transparent Icon</a>
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1 icon icon-lock">Large Transparent Icon</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--default btn--large btn--blue-2 icon icon--large icon-lock">Large Icon</a>
-                    <a href="#" class="btn btn--default btn--large btn--green-1 icon icon--large icon-lock">Large Icon</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2 icon icon--large icon-lock">Large Transparent Icon</a>
-                    <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1 icon icon--large icon-lock">Large Transparent Icon</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="risk-select btn btn--default btn--blue-3 btn--transparent btn--small btn--small-padded active">Large Padded Small Button Active</a>
-                    <a href="#" class="risk-select btn btn--default btn--blue-3 btn--transparent btn--small btn--small-padded">Large Padded Small Button</a>
-                </div>
-                <div class="rhythm-m-1">
-                    <a href="#" class="btn btn--bordered btn--bordered--blue-3 btn--bordered--active">Active Bordered Button</a>
-                    <a href="#" class="btn btn--bordered btn--bordered--green-1">Bordered Button Green 1</a>
-                </div>
-                <div class="rhythm-m-2">
-                    <a href="#" class="btn btn--bordered btn--bordered--blue-3 btn--bordered--icon-top btn--bordered--active"><span class="icon icon-invest btn__icon"></span>Active with Icon</a>
-                    <a href="#" class="btn btn--bordered btn--bordered--green-1 btn--bordered--icon-top"><span class="icon icon-car btn__icon"></span>Bordered Btn Icon</a>
-                </div>
-        	</div>
-        </div>
-        <div class="site-footer rhythmic-3xl">
-            <div class="contented">
-                <a href="#" class="ps text-link text-link--grey-15 text-link--divided">Link 1</a>
-                <a href="#" class="ps text-link text-link--grey-15 gutted-m-left-xs text-link--divided">Link 2</a>
-                <a href="#" class="ps text-link text-link--grey-15 gutted-m-left-xs">Link 3</a>
+                <div id="colurs" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1  rhythmic  rhythm-m-1/2">Colours</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                        <p class="ps  gutted  rhythm-m-1-half  bg-black  text-white  rhythmic-xs">scss / includes / settings / variables</p>
+                        <p class="rhythm-m-1-half">Colours should be split into two sections, branding and helpers. All colours are included in the <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">$site-colours</span> array, helper classes are created using this array. For example, adding <span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">"brand-primary" : $brand-primary</span> to this array, will give you access to:</p>
+                        <ul class="list">
+                            <li class="list__item  rhythm-m-0-half"><span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.bg-brand-primary</span></li>
+                            <li class="list__item  rhythm-m-0-half"><span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.btn--brand-primary</span></li>
+                            <li class="list__item  rhythm-m-0-half"><span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.text-brand-primary</span></li>
+                            <li class="list__item  rhythm-m-0-half"><span class="bg-black  text-white  rhythmic-xxs  gutted-xxs">.text-link-brand-primary</span></li>
+                    </div><!-- /.block -->
+
+                    <div class="grid">
+                        <div class="grid__item  width-1/2  mobile-width-1/1 mobile-rhythm-m-1">
+                            <div class="block  bg-brand-primary  rhythmic  text-white text-center">$brand-primary</div>
+                        </div><!--
+                        --><div class="grid__item  width-1/2  mobile-width-1/1">
+                            <div class="block  bg-brand-secondary  rhythmic  text-white text-center">$brand-secondary</div>
+                        </div>
+                    </div><!-- /.grid -->
+
+                </div><!-- /#colurs -->
+
+
+                <div id="typography" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1  rhythmic  rhythm-m-1">Typography</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                    </div><!-- /.block -->
+
+                    <h1 class="h1 rhythm-m-0-half">Header 1</h1>
+                    <h2 class="h2 rhythm-m-0-half">Header 2</h2>
+                    <h3 class="h3 rhythm-m-0-half">Header 3</h3>
+                    <h4 class="h4 rhythm-m-1-half">Header 4</h4>
+
+                    <div class="grid">
+                        <div class="grid__item  width-1/2  tablet-width-1/1">
+                            <p class="rhythm-m-1-half">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="p rhythm-m-1-half">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="ps">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div><!-- /.grid -->
+
+                </div><!-- /.typography -->
+
+
+                <div id="links" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1  rhythmic rhythm-m-1/2">Links</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                    </div><!-- /.block -->
+
+                    <div class="rhythm-m-1">
+                        <a href="#" class="text-link">Default Text Link</a>
+                        <a href="#" class="text-link text-link--brand-primary  gutted-m-left-l">Text Link Brand Primary</a>
+                        <a href="#" class="text-link text-link--brand-secondary  gutted-m-left-l">Text Link Brand Secondary</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="p  text-link text-link--divided">Divided Link 1</a>
+                        <a href="#" class="p  text-link  gutted-m-left-xs text-link--divided">Divided Link 2</a>
+                        <a href="#" class="p  text-link  gutted-m-left-xs">Divided Link 3</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="ps  text-link text-link--divided">Divided Link 1 Blue 1</a>
+                        <a href="#" class="ps  text-link  gutted-m-left-xs text-link--divided">Divided Link 2 Blue 1</a>
+                        <a href="#" class="ps  text-link  gutted-m-left-xs">Divided Link 3 Blue 1</a>
+                    </div>
+
+                </div><!-- /.links -->
+
+
+                <div id="inputs" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1  rhythmic rhythm-m-1">Inputs</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                    </div><!-- /.block -->
+
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="h1 text-blue-3 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Blue 3 Set Value" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="h2 text-green-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Green 1 Set Value" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="h3 text-red-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Red 1 Set Value" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="h4 text-orange-2 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Orange 2 Set Value" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="text-grey-60 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" value="Form Input Grey 60 Set Value" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-1">
+                            <input type="text" class="text-yellow-1 gutted-s rhythmic-xxs rhythm-p-2-top--s form-input block" placeholder="Form Input Yellow 1 Placeholder">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__item width-1/2 rhythm-m-2">
+                            <input type="text" class="gutted-s rhythmic-xxs rhythm-p-2-top--s form-input" placeholder="Default input">
+                        </div>
+                    </div>
+
+                </div><!-- /#inputs -->
+
+
+                <div id="buttons" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1 rhythmic rhythm-m-1">Buttons</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted  rhythm-m-2">
+                    </div><!-- /.block -->
+
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default">Default Button</a>
+                        <a href="#" class="btn btn--default btn--upper">Uppercase Button</a>
+                        <button class="btn btn--default" disabled>Disabled Button</button>
+                        <a href="#" class="btn btn--default btn--transparent">Transparent Button</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--grey-85">Button Grey 85</a>
+                        <a href="#" class="btn btn--default btn--grey-60">Button Grey 60</a>
+                        <a href="#" class="btn btn--default btn--grey-25">Button Grey 25</a>
+                        <a href="#" class="btn btn--default btn--grey-15">Button Grey 15</a>
+                        <a href="#" class="btn btn--default btn--grey-03">Button Grey 03</a>
+                        <a href="#" class="btn btn--default btn--white">Button White</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--orange-1">Button Orange 1</a>
+                        <a href="#" class="btn btn--default btn--orange-2">Button Orange 2</a>
+                        <a href="#" class="btn btn--default btn--orange-3">Button Orange 3</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--blue-1">Button Blue 1</a>
+                        <a href="#" class="btn btn--default btn--blue-2">Button Blue 2</a>
+                        <a href="#" class="btn btn--default btn--blue-3">Button Blue 3</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--red-1">Button Red 1</a>
+                        <a href="#" class="btn btn--default btn--red-2">Button Red 2</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--green-1">Button Green 1</a>
+                        <a href="#" class="btn btn--default btn--green-2">Button Green 2</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="btn btn--default btn--yellow-1">Button Yellow 1</a>
+                        <a href="#" class="btn btn--default btn--yellow-2">Button Yellow 2</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--blue-2 btn--transparent">Transparent Blue 2</a>
+                        <a href="#" class="btn btn--default btn--green-1 btn--transparent">Transparent Green 1</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--blue-2 icon icon-arrow">Icon</a>
+                        <a href="#" class="btn btn--default btn--green-1 icon icon-arrow">Icon</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--blue-2 icon icon--large icon-arrow">Icon Large</a>
+                        <a href="#" class="btn btn--default btn--green-1 icon icon--large icon-arrow">Icon Large</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="btn btn--default btn--blue-2 btn--transparent icon icon-arrow">Transparent Icon</a>
+                        <a href="#" class="btn btn--default btn--green-1 btn--transparent icon icon-arrow">Transparent Icon</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--small btn--blue-1">Button Small</a>
+                        <a href="#" class="btn btn--default btn--small btn--blue-2">Button Small</a>
+                        <a href="#" class="btn btn--default btn--small btn--blue-3">Button Small</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--small btn--transparent btn--blue-2">Transparent Small</a>
+                        <a href="#" class="btn btn--default btn--small btn--transparent btn--green-1">Transparent Small</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--small btn--blue-2 icon icon-lock">Small Icon</a>
+                        <a href="#" class="btn btn--default btn--small btn--green-1 icon icon-lock">Small Icon</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="btn btn--default btn--small btn--transparent btn--blue-2 icon icon-lock">Small Transparent Icon</a>
+                        <a href="#" class="btn btn--default btn--small btn--transparent btn--green-1 icon icon-lock">Small Transparent Icon</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--large btn--blue-1">Button Large</a>
+                        <a href="#" class="btn btn--default btn--large btn--blue-2">Button Large</a>
+                        <a href="#" class="btn btn--default btn--large btn--blue-3">Button Large</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2">Transparent Large</a>
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1">Transparent Large</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--large btn--blue-2 icon icon-lock">Large Icon</a>
+                        <a href="#" class="btn btn--default btn--large btn--green-1 icon icon-lock">Large Icon</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2 icon icon-lock">Large Transparent Icon</a>
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1 icon icon-lock">Large Transparent Icon</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--default btn--large btn--blue-2 icon icon--large icon-lock">Large Icon</a>
+                        <a href="#" class="btn btn--default btn--large btn--green-1 icon icon--large icon-lock">Large Icon</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--blue-2 icon icon--large icon-lock">Large Transparent Icon</a>
+                        <a href="#" class="btn btn--default btn--large btn--transparent btn--green-1 icon icon--large icon-lock">Large Transparent Icon</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="risk-select btn btn--default btn--blue-3 btn--transparent btn--small btn--small-padded active">Large Padded Small Button Active</a>
+                        <a href="#" class="risk-select btn btn--default btn--blue-3 btn--transparent btn--small btn--small-padded">Large Padded Small Button</a>
+                    </div>
+                    <div class="rhythm-m-1">
+                        <a href="#" class="btn btn--bordered btn--bordered--blue-3 btn--bordered--active">Active Bordered Button</a>
+                        <a href="#" class="btn btn--bordered btn--bordered--green-1">Bordered Button Green 1</a>
+                    </div>
+                    <div class="rhythm-m-2">
+                        <a href="#" class="btn btn--bordered btn--bordered--blue-3 btn--bordered--icon-top btn--bordered--active"><span class="icon icon-invest btn__icon"></span>Active with Icon</a>
+                        <a href="#" class="btn btn--bordered btn--bordered--green-1 btn--bordered--icon-top"><span class="icon icon-car btn__icon"></span>Bordered Btn Icon</a>
+                    </div>
+
+                </div><!-- /#buttons -->
+
+
+                <div id="helpers" class="rhythmic rhythm-m-5">
+
+                    <h2 class="h1 rhythmic rhythm-m-1/2">Helpers</h2>
+
+                    <div class="block  bg-white  bordered  rhythmic  gutted">
+                    </div><!-- /.block -->
+
+                </div><!-- /#helpers -->
+                
+                
+        	</div><!-- /.contented -->
+        </div><!-- /.site-content -->
+
+        <div class="site-footer  rhythmic-3xl">
+            <div class="contented  text-center  text-link--inverted">
+               The Unit SCSS Baseplate
             </div>
-        </div>
-    </div>
+        </div><!-- /.site-footer -->
+
+    </div><!-- /.site-wrapper -->
+
 </body>
 </html>
+
+<!--
+
+    DOCS!
+
+    hard & fast rules:
+
+        - BEM class names
+            https://css-tricks.com/bem-101/
+
+        - double space unrelated class names
+            example; "block  panel  style style--mod"
+
+        - end hml elements with commented main class after
+            example; "</div><!- /.contented ->"
+
+    more reading:
+
+        http://cssguidelin.es/
+-->

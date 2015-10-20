@@ -1,20 +1,20 @@
 /*------------------------------------*\
-    #PATTERNS
+    #ICONS
 
     Dependancies:
 
 \*------------------------------------*/
 
-@font-face {
-  	font-family: 'fdlt';
-  	src: url( '#{$font-path}/fdlt.eot' );
-  	src: url( '#{$font-path}/fdlt.eot?#iefix' ) format( 'embedded-opentype' ),
-    	 url( '#{$font-path}/fdlt.woff' ) format( 'woff' ),
-    	 url( '#{$font-path}/fdlt.ttf' ) format( 'truetype' ),
-    	 url( '#{$font-path}/fdlt.svg#fdlt' ) format( 'svg' );
-  	font-weight: normal;
-  	font-style: normal;
-}
+// @font-face {
+//   	font-family: 'fdlt';
+//   	src: url( '#{$font-path}/fdlt.eot' );
+//   	src: url( '#{$font-path}/fdlt.eot?#iefix' ) format( 'embedded-opentype' ),
+//     	 url( '#{$font-path}/fdlt.woff' ) format( 'woff' ),
+//     	 url( '#{$font-path}/fdlt.ttf' ) format( 'truetype' ),
+//     	 url( '#{$font-path}/fdlt.svg#fdlt' ) format( 'svg' );
+//   	font-weight: normal;
+//   	font-style: normal;
+// }
 
 [class^="icon-"]:after,
 [class*=" icon-"]:after {
@@ -22,7 +22,7 @@
     display: inline-block;
     vertical-align: middle;
     text-align: left;
-    float: right;
+    // float: right;
     text-transform: none;
     font-family: 'fdlt';
     font-weight: normal;

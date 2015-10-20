@@ -7,7 +7,7 @@
 
 
 // Fidelity colour backgrounds: bg-categoryname
-@each $colour in $fidelity-colours {
+@each $colour in $site-colours {
 
     .bg-#{ nth( $colour, 1 ) } {
     	background: #{ nth( $colour, 2 ) };

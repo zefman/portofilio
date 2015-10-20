@@ -96,24 +96,16 @@
 
 
 // Coloured buttons
-@each $colour in $fidelity-colours {
+@each $colour in $site-colours {
 
     .btn--#{ nth( $colour, 1 ) } {
-        @include button-factory( #{ nth( $colour, 2 ) }, #ffffff, map-get( $fidelity-colours-darkened, #{ nth( $colour, 1 ) } ), "", #{ nth( $colour, 2 ) } );
-    }
-}
-
-// Buttons that need black text colour
-.btn--grey-25, .btn--grey-15, .btn--grey-03, .btn--white, .btn--yellow-2 {
-    color: $text-colour;
-    &:not([disabled]):hover {
-        color: $text-colour;
+        @include button-factory( #{ nth( $colour, 2 ) }, #ffffff, map-get( $site-colours-hover, #{ nth( $colour, 1 ) } ), "", #{ nth( $colour, 2 ) } );
     }
 }
 
 
 
-@each $colour in $fidelity-colours {
+@each $colour in $site-colours {
     .btn--transparent {
         &.btn--#{ nth( $colour, 1 ) } {
             &:not([disabled]):hover {
@@ -219,31 +211,5 @@
 
         .old & {
             top: 17px;
-        }
-    }
-
-
-/*------------------------------------*\
-    #OUTLINE BUTTONS - to be swapped out
-\*------------------------------------*/
-
-.btn--o {
-    border: 3px solid $blue-3;
-    background: transparent;
-    color: $blue-3;
-    text-decoration: none;
-    display: inline-block;
-    @include adjust-font-size-to( 12px );
-    padding: rhythm( 0.5, $base-font-size ) gutter( 0.2, $base-font-size );
-    width: 100%;
-}
-
-    .btn--o-white {
-        border-color: white;
-        color: $blue-1;
-        transition: all 0.5s ease;
-        &:hover {
-            color: $blue-3;
-            border-color: $blue-3;
         }
     }

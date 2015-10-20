@@ -26,7 +26,7 @@
 }
 
 // Coloured text
-@each $colour in $fidelity-colours {
+@each $colour in $site-colours {
 
     .text-#{ nth( $colour, 1 ) } {
         color: #{ nth( $colour, 2 ) };
@@ -86,7 +86,7 @@
     }
 }
 
-@each $colour in $fidelity-colours {
+@each $colour in $site-colours {
     .text-underline-#{ nth( $colour, 1 ) } {
         &:after {
             background: #{ nth( $colour, 2 ) };

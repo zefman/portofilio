@@ -17,18 +17,12 @@
     position: relative;
 }
 
-    // Fixed positioning is just temporary?
     .site-header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
         z-index: index( $elements, "site-header" );
     }
 
     .site-content {
         min-height: 100%;
-        margin-bottom: rhythm( -3 );
         overflow: hidden;
         z-index: index( $elements, "site-content" );
 

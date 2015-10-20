@@ -1,10 +1,10 @@
 # SCSS Template
 
-Baseplate content architecture and bootstrap Sass files. 
+Baseplate content architecture, and bootstrap SASS files. 
 
 Designed during the development of Big Fan Club.
 
-### Install
+### Local Dependencies
 
 `npm i`
 
