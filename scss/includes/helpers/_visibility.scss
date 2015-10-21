@@ -64,15 +64,17 @@
 
 
 
-// stupid classes to toggle search input on user management table
+// opacity helpers
 .no-opacity {
     visibility: hidden;
     opacity: 0;
 }
+
 .yes-opacity {
     visibility: visible;
     opacity: 1;
 }
+
 .fade-opacity {
     transition: opacity 0.25s ease, visibility 0.25s ease;
 }

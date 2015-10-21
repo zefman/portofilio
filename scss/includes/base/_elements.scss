@@ -119,6 +119,9 @@ textarea {
     min-height: rhythm( 3, 15px );
     vertical-align: text-top;
     resize: vertical;
+
+    font-family: inherit;
+    @include adjust-font-size-to( $base-font-size, 1.4 );
 }
 
 input[type="image"] {
