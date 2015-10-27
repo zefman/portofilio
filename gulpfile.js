@@ -18,31 +18,38 @@ var minifyCss    = require( 'gulp-minify-css' );
 // use autoprefixer and inject into browser
 // minify, and copy to "CSS" directory
 gulp.task( 'css', function() {
-    return gulp.src("./scss/**/**/*.scss")
+    return gulp.src("./assets/scss/**/**/*.scss")
         .pipe( compass( {
-            css:  './css',
-            sass: './scss'
+            css:  './assets/css',
+            sass: './assets/scss'
         } ) )
         .pipe( autoprefixer( {
             browsers: [ 'last 2 versions', 'ie > 9' ],
             cascade: false
         } ) )
         .pipe( minifyCss() )
-        .pipe( gulp.dest( "./css" ) )
+        .pipe( gulp.dest( "./assets/css" ) )
         .pipe( browserSync.stream() );
 });
 
-// Create a local server
+// Compile and create a local server
 gulp.task( 'serve', [ 'css'], function() {
     browserSync.init( {
         server: {
             baseDir: "./"
         }
     } );
-
-    gulp.watch( "./scss/**/*.scss", [ 'css' ] );
-    gulp.watch( "./scss/**/*.scss" ).on( 'change', browserSync.reload );
+    gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
+    gulp.watch( "./assets/scss/**/*.scss" ).on( 'change', browserSync.reload );
     gulp.watch( "./*.html" ).on( 'change', browserSync.reload );
 } );
 
+// Compile and watch for changes (no server)
+gulp.task( 'watch', [ 'css'], function() {
+    gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
+    gulp.watch( "./assets/scss/**/*.scss" ).on( 'change', browserSync.reload );
+    gulp.watch( "./*.html" ).on( 'change', browserSync.reload );
+} );
+
+// Compile
 gulp.task( 'default', [ 'css' ] );
