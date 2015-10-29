@@ -113,15 +113,46 @@
 
 /*
  * Retrieves a media query from the $breakpoints map variable
+ *
+ * Second value optional:
+ *
+ * If one breakpoint is defined, "@include respond-to" will apply @content to $breakpoint size and smaller.
+ * If both breakpoints are passed in, "respond-to" will return a MQ target between $breakpoint and $breakpoint2.
+ *
+ * Examples:
+ * 
+ * @include respond-to( x )  =  @media (max-width: X px)
+ * @include respond-to( x, x )  =  @media (max-width: X px) and ( min-width: X px )
+ * 
  */
-@mixin respond-to( $breakpoint ) {
+@mixin respond-to( $breakpoint, $breakpoint2: "" ) {
+
+    // if we've got breakpoint 1
+    // and it's in our $breakpoints array
     @if map-has-key( $breakpoints, $breakpoint ) {
-        @media #{ map-get( $breakpoints, $breakpoint ) } {
-          @content;
+
+        // if breakpoint 2 has a value
+        // and it's in the $breakpoints-reverse array, return both options
+        @if map-has-key( $breakpoints-reverse, $breakpoint2 ) {
+
+            @media #{ map-get( $breakpoints, $breakpoint ) } and #{ map-get( $breakpoints-reverse, $breakpoint2 ) } {
+                @content;
+            }
+
+        // we just have the first value
+        // return this size and down
+        } @else {
+
+            @media #{ map-get( $breakpoints, $breakpoint ) } {
+                @content;
+            }
+
         }
+
     } @else {
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.";
     }
+
 }
 
 
