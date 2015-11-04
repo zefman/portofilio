@@ -6,7 +6,7 @@
 \*------------------------------------*/
 
 
-// Fidelity colour backgrounds: bg-categoryname
+// Backgrounds: bg-categoryname
 @each $colour in $site-colours {
 
     .bg-#{ nth( $colour, 1 ) } {
