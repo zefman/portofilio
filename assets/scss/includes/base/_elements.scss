@@ -83,6 +83,10 @@ iframe {
     vertical-align: bottom;
 }
 
+iframe {
+    border: 0;
+}
+
 audio {
     display: block;
     min-height: rhythm( 2 );
