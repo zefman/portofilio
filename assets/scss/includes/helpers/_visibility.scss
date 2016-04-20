@@ -15,6 +15,11 @@
     visibility: hidden !important;
 }
 
+
+
+/*
+ * Hide/show helpers for our breakpoints
+ */
 @each $breakpoint in $breakpoints {
 
     @media #{ nth( $breakpoint, 2 ) } {
@@ -24,6 +29,49 @@
         }
     }
 }
+
+@each $breakpoint in $breakpoints {
+
+   .#{ nth( $breakpoint, 1 ) }-visible {
+       display: none;
+
+       @media #{ nth( $breakpoint, 2 ) } {
+           display: block;
+       }
+   }
+}
+
+@each $breakpoint in $breakpoints {
+
+   .#{ nth( $breakpoint, 1 ) }-visible-inline-block {
+       display: none;
+
+       @media #{ nth( $breakpoint, 2 ) } {
+           display: inline-block;
+       }
+   }
+}
+
+@each $breakpoint in $breakpoints {
+
+   .#{ nth( $breakpoint, 1 ) }-inline-block {
+       @media #{ nth( $breakpoint, 2 ) } {
+           display: inline-block;
+           width: auto; /* [1] */
+       }
+   }
+}
+
+@each $breakpoint in $breakpoints {
+
+   .#{ nth( $breakpoint, 1 ) }-display-none {
+
+       @media #{ nth( $breakpoint, 2 ) } {
+           display: none;
+       }
+   }
+}
+
 
 /*
  * Hide only visually, but have it available for screen readers:
