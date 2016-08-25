@@ -1,7 +1,15 @@
 .site-header {
     text-align: center;
     position: relative;
+    background: $brand-primary;
 }
+
+    .site-strapline {
+        position: absolute;
+        bottom: 150px;
+        left: 50%;
+        transform: translateX( -50% );
+    }
 
     .site-header__logo-container {
         position: absolute;
@@ -12,7 +20,7 @@
     }
 
 .logo {
-    transform-origin: bottom;
+    transform-origin: top;
     transform-style: preserve-3d;
 }
 
@@ -59,3 +67,96 @@
     .site-nav--active {
         display: block;
     }
+
+
+
+.experience-logos {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: $white;
+    position: relative;
+    opacity: 0.9999;
+
+    .experience-logos__container {
+        animation-name: experience-animation;
+        animation-duration: 40s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        position: relative;
+        width: 100%;
+    }
+    .experience-logos__1 {
+        // height: 100%;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .experience-logos__2 {
+        display: block;
+        // height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        // animation-name: experience-animation;
+        // animation-duration: 20s;
+        // animation-fill-mode: both;
+        // animation-timing-function: linear;
+        // animation-iteration-count: infinite;
+        // animation-delay: 6.6666666666s;
+    }
+
+    .experience-logos__logo {
+        display: inline-block;
+        max-width: 30%;
+        margin: 10px;
+    }
+
+    .angular {
+        max-width: 50%;
+    }
+    .laravel {
+        max-width: 20%;
+    }
+    .aws,
+    .backbone {
+        max-width: 43%;
+    }
+    .drupal,
+    .javascript,
+    .html5 {
+        max-width: 10%;
+    }
+    .craft,
+    .wordpress {
+        max-width: 30%;
+    }
+
+    .css3,
+    .sass,
+    .grunt {
+        max-width: 15%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .gulp {
+        max-width: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+}
+
+@keyframes  experience-animation {
+    from {
+        transform: translate3d( 0, 0, 0 );
+    }
+    to {
+        transform: translate3d( 0, -50%, 0 );
+    }
+}

@@ -1,15 +1,14 @@
 /*******************************************************************************
  *      The Unit SCSS Base Template
  ******************************************************************************/
- 
+
 var gulp         = require( 'gulp' );
 var compass      = require( 'gulp-compass' );           // https://www.npmjs.com/package/gulp-compass
 var autoprefixer = require( 'gulp-autoprefixer');       // npm install --save-dev gulp-autoprefixer
 var concat       = require( 'gulp-concat' );            // https://www.npmjs.com/package/gulp-concat
 
 // Local server
-var serve        = require( 'gulp-serve' );             // https://www.npmjs.com/package/gulp-serve
-var browserSync  = require( 'browser-sync').create();   // https://www.npmjs.com/package/browser-sync
+var connect      = require('gulp-connect');
 
 // Minify
 var minifyCss    = require( 'gulp-minify-css' );
@@ -29,27 +28,18 @@ gulp.task( 'css', function() {
         } ) )
         .pipe( minifyCss() )
         .pipe( gulp.dest( "./assets/css" ) )
-        .pipe( browserSync.stream() );
+        .pipe( connect.reload() );
 });
 
-// Compile and create a local server
-gulp.task( 'serve', [ 'css'], function() {
-    browserSync.init( {
-        server: {
-            baseDir: "./"
-        }
-    } );
-    gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
-    gulp.watch( "./assets/scss/**/*.scss" ).on( 'change', browserSync.reload );
-    gulp.watch( "./*.html" ).on( 'change', browserSync.reload );
-} );
+gulp.task('connect', function() {
+  connect.server();
+});
 
 // Compile and watch for changes (no server)
 gulp.task( 'watch', [ 'css'], function() {
     gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
-    gulp.watch( "./assets/scss/**/*.scss" ).on( 'change', browserSync.reload );
-    gulp.watch( "./*.html" ).on( 'change', browserSync.reload );
+    gulp.watch( "./*.html" ).on( 'change', connect.reload() );
 } );
 
 // Compile
-gulp.task( 'default', [ 'css' ] );
+gulp.task( 'default', [ 'watch', 'connect' ] );

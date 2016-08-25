@@ -18,9 +18,8 @@
 }
 
     .site-header {
-        z-index: index( $elements, "site-header" );
+        //z-index: index( $elements, "site-header" );
         min-height: 100%;
-        background: red;
     }
 
     .site-content {
@@ -43,3 +42,28 @@
 
         background: #242424;
     }
+
+    .slant-section {
+        margin-top: rhythm( -6 );
+        z-index: index( $elements, "site-content" );
+        position: relative;
+        overflow: hidden;
+        padding-top: 70px;
+    }
+
+        .slant-section__slant {
+            height: rhythm( 3 );
+            transform: rotate( 2deg );
+            box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.1);
+            width: 120%;
+            margin-left: -10%;
+            z-index: 1;
+            position: relative;
+        }
+
+        .slant-section__body {
+            position: relative;
+            margin-top: -40px;
+            min-height: 400px;
+            z-index: 2;
+        }
