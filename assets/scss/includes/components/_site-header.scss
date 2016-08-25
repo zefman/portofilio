@@ -1,0 +1,61 @@
+.site-header {
+    text-align: center;
+    position: relative;
+}
+
+    .site-header__logo-container {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY( -50% );
+        perspective: 500px;
+    }
+
+.logo {
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+}
+
+    .logo__text {
+        border: 10px solid $white;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    .logo__expand-nav {
+        height: rhythm( 4 );
+        width: calc( 100% + 20px );
+        background: #fff;
+        position: absolute;
+        top: calc( -50% - 7px );
+        left: 50%;
+        transform: translateX(-50%) translateZ( rhythm( -2 ) ) rotateX(90deg);
+        opacity: 0;
+    }
+
+    .logo--nav {
+        margin-top: 1px;
+        .logo__text {
+            border: 6px solid $black;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+
+.site-nav {
+    height: rhythm( 4 );
+    width: 100%;
+    background: $white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    display: none;
+    text-transform: uppercase;
+}
+
+    .site-nav--active {
+        display: block;
+    }

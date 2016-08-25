@@ -10,7 +10,7 @@
  */
 
 .animate {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
@@ -22,17 +22,35 @@
 
 
 
-.animate--fadeIn {
-    animation-name: fadeIn;
+.animate--fade-in {
+    animation-name: fade-in;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
     0% {
         opacity: 0;
     }
 
     100% {
         opacity: 1;
+    }
+}
+
+
+
+.animate--fade-in-up {
+    animation-name: fade-in-up;
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translate3d( 0, 10px, 0 );
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d( 0, 0, 0 );
     }
 }
 
@@ -133,11 +151,11 @@
 \*------------------------------------*/
 
 @for $i from 1 through 30 {
-    .animate-delay-#{$i} {
+    .animate--delay-#{$i} {
         animation-delay: #{$i * 100}ms;
     }
 
-    .animate-delay:nth-of-type(#{$i}) {
+    .animate--delay:nth-of-type(#{$i}) {
         animation-delay: #{$i * 200}ms;
     }
 }

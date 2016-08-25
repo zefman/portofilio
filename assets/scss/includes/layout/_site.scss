@@ -19,6 +19,8 @@
 
     .site-header {
         z-index: index( $elements, "site-header" );
+        min-height: 100%;
+        background: red;
     }
 
     .site-content {
