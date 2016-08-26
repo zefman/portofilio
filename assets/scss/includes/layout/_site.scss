@@ -45,10 +45,12 @@
 
     .slant-section {
         margin-top: rhythm( -6 );
-        z-index: index( $elements, "site-content" );
+        z-index: 4;
         position: relative;
         overflow: hidden;
         padding-top: 70px;
+        padding-bottom: 70px;
+        margin-bottom: -100px;
     }
 
         .slant-section__slant {
@@ -59,6 +61,18 @@
             margin-left: -10%;
             z-index: 1;
             position: relative;
+        }
+
+        .slant-section__bottom-slant {
+            height: rhythm( 3 );
+            transform: rotate( -2deg );
+            box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.1);
+            width: 120%;
+            margin-left: -10%;
+            z-index: 5;
+            position: relative;
+            margin-top: rhythm( -1.5 );
+            // margin-bottom: rhythm( -1.5 );
         }
 
         .slant-section__body {

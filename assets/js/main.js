@@ -6,7 +6,7 @@
     var $logoText = $logo.find( '.logo__text' );
     var $siteNav  = $( '.site-nav' );
 
-    var finishedOffset = $logoNav.offset().top - $logoNav.height() + 15;
+    var finishedOffset = $logoNav.offset().top - $siteNav.height();
     var maxRotatation  = 90;
     var maxWidth       = $window.width();
     var minWidth       = $logo.outerWidth();
@@ -23,6 +23,9 @@
             window.requestAnimationFrame( rotateLogo );
         }
     }
+    $('body').on({
+        'touchmove': throttle( updateOffset, 16 )
+    });
 
     function stopUpdate() {
         needsUpdate = false;
@@ -93,7 +96,5 @@
             }, delay);
         };
     }
-
-    $( '.experience-logos' ).css( 'height', $( '.experience-logos' ).width() );
 
 } )();

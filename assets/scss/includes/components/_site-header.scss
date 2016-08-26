@@ -9,6 +9,11 @@
         bottom: 150px;
         left: 50%;
         transform: translateX( -50% );
+        width: 100%;
+
+        @include respond-to( mobile ) {
+            bottom: 80px;
+        }
     }
 
     .site-header__logo-container {
@@ -49,6 +54,7 @@
             font-weight: 900;
             font-size: 40px;
             line-height: 50px;
+            transition: color 5s ease, border 5s ease;
         }
     }
 
@@ -62,17 +68,30 @@
     z-index: 200;
     display: none;
     text-transform: uppercase;
+    transform: translate3d(0px,0px,0px);
+    opacity: 0;
+    display: block;
 }
 
+    .site-nav__content {
+        display: none;
+    }
+
     .site-nav--active {
-        display: block;
+        opacity: 1;
+
+        .site-nav__content {
+            display: block;
+        }
     }
 
 
 
 .experience-logos {
     width: 100%;
-    min-height: 200px;
+    height: auto;
+    padding-top: 100%;
+    // min-height: 200px;
     border-radius: 100%;
     overflow: hidden;
     background: $white;
@@ -85,7 +104,9 @@
         animation-fill-mode: both;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        position: relative;
+        position: absolute;
+        top: 0px;
+        left: 0px;
         width: 100%;
     }
     .experience-logos__1 {
