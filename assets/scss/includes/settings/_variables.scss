@@ -62,6 +62,76 @@ $site-success: #2ecc71;
 $site-warning: #e67e22;
 $site-error: #c0392b;
 
+// Greens
+$flat-turquoise: #1ABC9C;
+$flat-green-sea: #16A085;
+$flat-emerald: #2ECC71;
+$flat-nephritis: #27AE60;
+
+// Blues
+$flat-peter-river: #3498DB;
+$flat-belize-hole: #2980B9;
+$flat-wet-asphalt: #34495E;
+$flat-midnight-blue: #2C3E50;
+
+// Purples
+$flat-amethyst: #9B59B6;
+$flat-wisteria: #8E44AD;
+
+// Yellows
+$flat-sunflower: #F1C40F;
+
+// Oranges
+$flat-orange: #F39C12;
+$flat-carrot: #E67E22;
+$flat-pumpkin: #D35400;
+
+// Reds
+$flat-alizarin: #E74C3C;
+$flat-pomegranate: #C0392B;
+
+// Grays
+$flat-clouds: #ECF0F1;
+$flat-silver: #BDC3C7;
+$flat-concrete: #95A5A6;
+$flat-asbestos: #7F8C8D;
+
+// Aliases make colors easier to remember.
+
+// Greens
+$flat-green-1: $flat-turquoise;
+$flat-green-2: $flat-green-sea;
+$flat-green-3: $flat-emerald;
+$flat-green-4: $flat-nephritis;
+
+// Blues
+$flat-blue-1: $flat-peter-river;
+$flat-blue-2: $flat-belize-hole;
+$flat-blue-3: $flat-wet-asphalt;
+$flat-blue-4: $flat-midnight-blue;
+
+// Purples
+$flat-purple-1: $flat-amethyst;
+$flat-purple-2: $flat-wisteria;
+
+// Yellows
+$flat-yellow-1: $flat-sunflower;
+
+// Oranges
+$flat-orange-1: $flat-orange;
+$flat-orange-2: $flat-carrot;
+$flat-orange-3: $flat-pumpkin;
+
+// Refs
+$flat-red-1: $flat-alizarin;
+$flat-red-2: $flat-pomegranate;
+
+// Grays
+$flat-gray-1: $flat-clouds;
+$flat-gray-2: $flat-silver;
+$flat-gray-3: $flat-concrete;
+$flat-gray-4: $flat-asbestos;
+
 // Colours array
 $site-colours: (
 	"brand-primary"  	: $brand-primary,
@@ -69,10 +139,27 @@ $site-colours: (
 	"white"				: $white,
 	"black"				: $black,
 	"grey"				: $grey,
-	"site-success"		: $site-success,
-	"site-warning"		: $site-warning,
-	"site-error"		: $site-error,
-	"link"				: $text-colour-link
+	"link"				: $text-colour-link,
+    "flat-green-1"      : $flat-green-1,
+    "flat-green-2"      : $flat-green-2,
+    "flat-green-3"      : $flat-green-3,
+    "flat-green-4"      : $flat-green-4,
+    "flat-blue-1"       : $flat-blue-1,
+    "flat-blue-2"       : $flat-blue-2,
+    "flat-blue-3"       : $flat-blue-3,
+    "flat-blue-4"       : $flat-blue-4,
+    "flat-gray-1"       : $flat-gray-1,
+    "flat-gray-2"       : $flat-gray-2,
+    "flat-gray-3"       : $flat-gray-3,
+    "flat-gray-4"       : $flat-gray-4,
+    "flat-orange-1"     : $flat-orange-1,
+    "flat-orange-2"     : $flat-orange-2,
+    "flat-orange-3"     : $flat-orange-3,
+    "flat-red-1"        : $flat-red-1,
+    "flat-red-2"        : $flat-red-2,
+    "flat-purple-1"     : $flat-purple-1,
+    "flat-purple-2"     : $flat-purple-2,
+    "flat-yellow-1"     : $flat-yellow-1,
 );
 
 // Darkened colours array
@@ -82,9 +169,6 @@ $site-colours-hover: (
 	"white"				: darken( $white, 10% ),
 	"black"				: lighten( $black, 10% ),
 	"grey"				: lighten( $grey, 10%),
-	"site-success"		: darken( $site-success, 10% ),
-	"site-warning"		: darken( $site-warning, 10% ),
-	"site-error"		: darken( $site-error, 10% ),
 	"link"				: darken( $text-colour-link, 10% )
 );
 

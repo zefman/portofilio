@@ -24,3 +24,10 @@
 .br-l { border-radius: $border-radius 0 0 $border-radius; }
 .br-bl { border-radius: 0 0 0 $border-radius; }
 .br-br { border-radius: 0 0 $border-radius 0; }
+
+
+
+.small-divider {
+    width: 20px;
+    height: 5px;
+}
