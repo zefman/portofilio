@@ -89,3 +89,7 @@
     }
 
 }
+
+.p--big {
+    @include adjust-font-size-to( 18px, 1.2 );
+}
