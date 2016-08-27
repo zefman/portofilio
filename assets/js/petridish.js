@@ -493,10 +493,10 @@
             $( 'canvas' ).css( {
               'background': bgColour.hex
             } );
-            $( '.logo--nav .logo__text' ).css( {
-                color: bgColour.hex,
-                borderColor: bgColour.hex
+            $( 'canvas' ).closest( '.js-section' ).css( {
+                backgroundColor: bgColour.hex
             } );
+            window.setFavicon( bgColour.hex );
             numSets = ( ( Math.random() * vm.numSets ) + 1 ).toFixed( 0 );
             stroke = ( Math.random() > 0.5 );
             numBirds = vm.numBirds;
@@ -519,83 +519,83 @@
             fadeAmount = ( typeof fadeAmount != 'undefined' ) ? fadeAmount : 1;
             return [
                 {
-                    "hex": "#1abc9c",
+                    "hex": "#1ABC9C",
                     "rgb": "rgba(26, 188, 156," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#16a085",
+                    "hex": "#16A085",
                     "rgb": "rgba(22, 160, 133," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#2ecc71",
+                    "hex": "#2ECC71",
                     "rgb": "rgba(46, 204, 113," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#27ae60",
+                    "hex": "#27AE60",
                     "rgb": "rgba(39, 174, 96," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#3498db",
+                    "hex": "#3498DB",
                     "rgb": "rgba(52, 152, 219," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#2980b9",
+                    "hex": "#2980B9",
                     "rgb": "rgba(41, 128, 185," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#9b59b6",
+                    "hex": "#9B59B6",
                     "rgb": "rgba(155, 89, 182," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#8e44ad",
+                    "hex": "#8E44AD",
                     "rgb": "rgba(142, 68, 173," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#34495e",
+                    "hex": "#34495E",
                     "rgb": "rgba(52, 73, 94," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#2c3e50",
+                    "hex": "#2C3E50",
                     "rgb": "rgba(44, 62, 80," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#f1c40f",
+                    "hex": "#F1C40F",
                     "rgb": "rgba(241, 196, 15," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#f39c12",
+                    "hex": "#F39C12",
                     "rgb": "rgba(243, 156, 18," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#e67e22",
+                    "hex": "#E67E22",
                     "rgb": "rgba(230, 126, 34," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#d35400",
+                    "hex": "#D35400",
                     "rgb": "rgba(211, 84, 0," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#e74c3c",
+                    "hex": "#E74C3C",
                     "rgb": "rgba(231, 76, 60," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#c0392b",
+                    "hex": "#C0392B",
                     "rgb": "rgba(192, 57, 43," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#ecf0f1",
+                    "hex": "#ECF0F1",
                     "rgb": "rgba(236, 240, 241," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#bdc3c7",
+                    "hex": "#BDC3C7",
                     "rgb": "rgba(189, 195, 199," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#95a5a6",
+                    "hex": "#95A5A6",
                     "rgb": "rgba(149, 165, 166," + fadeAmount + ")"
                 },
                 {
-                    "hex": "#7f8c8d",
+                    "hex": "#7F8C8D",
                     "rgb": "rgba(127, 140, 141," + fadeAmount + ")"
                 }
             ];

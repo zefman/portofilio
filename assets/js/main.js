@@ -97,4 +97,126 @@
         };
     }
 
+    /**
+     * Set the favicon based on a hex code
+     * @param String colour
+     */
+    function setFavicon( colour ) {
+        var favicon = 'favicon.png';
+        switch ( colour ) {
+            case '#1ABC9C':
+                favicon = 'favicon-turquoise.png';
+                break;
+            case '#16A085':
+                favicon = 'favicon-green-sea.png';
+                break;
+            case '#2ECC71':
+                favicon = 'favicon-emerald.png';
+                break;
+            case '#27AE60':
+                favicon = 'favicon-nephritis.png';
+                break;
+            case '#3498DB':
+                favicon = 'favicon-peter-river.png';
+                break;
+            case '#2980B9':
+                favicon = 'favicon-belize-hole.png';
+                break;
+            case '#34495E':
+                favicon = 'favicon-wet-asphalt.png';
+                break;
+            case '#2C3E50':
+                favicon = 'favicon-midnight-blue.png';
+                break;
+            case '#9B59B6':
+                favicon = 'favicon-amethyst.png';
+                break;
+            case '#8E44AD':
+                favicon = 'favicon-wisteria.png';
+                break;
+            case '#F1C40F':
+                favicon = 'favicon-sunflower.png';
+                break;
+            case '#F39C12':
+                favicon = 'favicon-orange.png';
+                break;
+            case '#E67E22':
+                favicon = 'favicon-carrot.png';
+                break;
+            case '#D35400':
+                favicon = 'favicon-pumpkin.png';
+                break;
+            case '#D35400':
+                favicon = 'favicon-pumpkin.png';
+                break;
+            case '#E74C3C':
+                favicon = 'favicon-alizarin.png';
+                break;
+            case '#C0392B':
+                favicon = 'favicon-pomegranate.png';
+                break;
+            case '#ECF0F1':
+                favicon = 'favicon-clouds.png';
+                break;
+            case '#BDC3C7':
+                favicon = 'favicon-silver.png';
+                break;
+            case '#95A5A6':
+                favicon = 'favicon-concrete.png';
+                break;
+            case '#7F8C8D':
+                favicon = 'favicon-asbestos.png';
+                break;
+        }
+
+        changeFavicon( 'assets/images/favicons/' + favicon );
+    }
+
+    window.setFavicon = setFavicon;
+    document.head = document.head || document.getElementsByTagName('head')[0];
+
+    function changeFavicon(src) {
+        var link = document.createElement('link');
+        var oldLink = document.getElementById('favicon');
+        link.id = 'favicon';
+        link.rel = 'shortcut icon';
+        link.href = src;
+        if (oldLink) {
+            document.head.removeChild(oldLink);
+        }
+        document.head.appendChild(link);
+    }
+
+    var sections = [];
+    function measureSections() {
+        sections = [];
+        $( '.js-section' ).each( function( index, section ) {
+            sections.push( {
+                element: $( section ),
+                start: $( section ).offset().top,
+                end: $( section ).offset().top + $( section ).height(),
+                inView: false
+            } );
+        } );
+    }
+    measureSections();
+
+    function setActiveSection() {
+        var scrollTop = $( window ).scrollTop();
+        sections.forEach( function( section ) {
+            if ( scrollTop >= section.start && scrollTop <= section.end ) {
+                section.inView = true;
+                var colour = section.element.css( 'background-color' );
+                $( '.logo--nav .logo__text' ).css( {
+                    color: colour,
+                    borderColor: colour
+                } );
+            } else {
+                section.inView = false;
+            }
+        } );
+    }
+
+    $( window ).on( 'scroll', throttle( setActiveSection, 250 ) );
+
 } )();
