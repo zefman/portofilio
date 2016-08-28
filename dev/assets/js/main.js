@@ -6,7 +6,7 @@
     var $logoText = $logo.find( '.logo__text' );
     var $siteNav  = $( '.site-nav' );
 
-    var finishedOffset = $logoNav.offset().top - $siteNav.height();
+    var finishedOffset = $logoNav.offset().top - $siteNav.height() + 15;
     var maxRotatation  = 90;
     var maxWidth       = $window.width();
     var minWidth       = $logo.outerWidth();
@@ -211,6 +211,12 @@
                     color: colour,
                     borderColor: colour
                 } );
+                $( '.burger' ).css( {
+                    borderColor: colour
+                } );
+                $( '.burger .burger__line' ).css( {
+                    backgroundColor: colour
+                } );
             } else {
                 section.inView = false;
             }
@@ -234,6 +240,57 @@
             }
         });
     });
+
+    // Mobile menu
+    var burger = $( '.burger' );
+    var mobileMenu = $( '.mobile-menu' );
+    var body = $( 'body' );
+    var menuOpen = false;
+    $( '.js-menu-trigger' ).on( 'click', function( event ) {
+        event.preventDefault();
+        if ( !menuOpen ) {
+            showMenu();
+        } else {
+            closeMenu();
+        }
+    } );
+    $( '.js-mobile-menu-link' ).on( 'click', closeMenu );
+    mobileMenu.on( 'click', closeMenu );
+    $( window ).on( 'resize', debounce( closeMenu, 250 ) );
+
+    function showMenu() {
+        var colour = $( 'header' ).css( 'background-color' );
+        burger.addClass( 'burger--active' );
+        mobileMenu.addClass( 'mobile-menu--active' );
+        mobileMenu.css( {
+            backgroundColor: colour
+        } );
+        $( '.logo--nav .logo__text' ).css( {
+            color: colour,
+            borderColor: colour
+        } );
+        $( '.burger' ).css( {
+            borderColor: colour
+        } );
+        $( '.burger .burger__line' ).css( {
+            backgroundColor: colour
+        } );
+        $( '.burger .burger__cross-line' ).css( {
+            backgroundColor: colour
+        } );
+        body.css( 'overflow', 'hidden' );
+        menuOpen = true;
+    }
+
+    function closeMenu() {
+        mobileMenu.removeClass( 'mobile-menu--active' );
+        burger.removeClass( 'burger--active' ).addClass( 'burger--closing' );
+        body.css( 'overflow', 'visible' );
+        menuOpen = false;
+        setTimeout( function() {
+            burger.removeClass( 'burger--closing' );
+        }, 800 );
+    }
 
 } )();
 

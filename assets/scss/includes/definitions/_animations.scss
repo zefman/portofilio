@@ -40,12 +40,13 @@
 
 .animate--fade-in-up {
     animation-name: fade-in-up;
+    transform-origin: center center;
 }
 
 @keyframes fade-in-up {
     0% {
         opacity: 0;
-        transform: translate3d( 0, 10px, 0 );
+        transform: translate3d( 0, 0px, 0 ) scale( 0.9 );
     }
 
     100% {
