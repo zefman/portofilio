@@ -496,7 +496,7 @@
             $( 'canvas' ).closest( '.js-section' ).css( {
                 backgroundColor: bgColour.hex
             } );
-            window.setFavicon( bgColour.hex );
+            // window.setFavicon( bgColour.hex );
             numSets = ( ( Math.random() * vm.numSets ) + 1 ).toFixed( 0 );
             stroke = ( Math.random() > 0.5 );
             numBirds = vm.numBirds;

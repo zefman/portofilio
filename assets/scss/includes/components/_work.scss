@@ -1,0 +1,92 @@
+.work {
+    position: relative;
+    box-shadow: 0px -10px 0px 0px rgba( 0, 0, 0, 0.1 );
+    overflow: hidden;
+}
+
+    .work__transition {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        width: 100%;
+        height: 400%;
+        background-color: rgba( 0, 0, 0, 0.2 );
+        z-index: 1;
+        transform: translate3d( -210%, -50%, 0 ) rotate( 45deg );
+        transform-origin: center center;
+    }
+
+    .work__transition--animate {
+        transition: transform 1s ease;
+        transform: translate3d( 210%, -50%, 0 ) rotate( 45deg );
+    }
+
+    .work__controls {
+        position: absolute;
+        top: 0px;
+    }
+
+.work-item {
+    position: relative;
+    z-index: 2;
+}
+
+    .work-item__title {
+        // transition: all 0.5s ease;
+        // transform: translate3d( -200px, 0, 0 );
+    }
+
+    .work-item__skills {
+        // transition: all 0.5s ease;
+        // transform: translate3d( -200px, 0, 0 );
+        animation-delay: 0.1s;
+    }
+
+    .work-item__description {
+        // transition: all 0.5s ease;
+        // transform: translate3d( -200px, 0, 0 );
+        animation-delay: 0.2s;
+    }
+
+    .work-item__image {
+        // transition: all 0.5s ease;
+        box-shadow: 0px 0px 0px 10px rgba( 0, 0, 0, 0.1 );
+        animation-delay: 0.1s;
+    }
+
+    .work-item--active {
+        .work-item__title,
+        .work-item__skills,
+        .work-item__description {
+            animation-name: fade-in-right;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .work-item__image {
+            animation-name: fade-in-rotate-right;
+            animation-duration: 0.6s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
+
+    .work-item--leaving {
+        .work-item__title,
+        .work-item__skills,
+        .work-item__description {
+            animation-name: fade-out-right;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .work-item__image {
+            transform-origin: bottom;
+            animation-name: fade-out-right;
+            animation-duration: 0.6s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }

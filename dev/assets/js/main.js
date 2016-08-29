@@ -292,6 +292,27 @@
         }, 800 );
     }
 
+    // Work slider
+    var workItems = $( '.work-item' );
+    var workTransition = $( '.work__transition' );
+    $( '.js-work-trigger' ).on( 'click', function( event ) {
+        event.preventDefault();
+        var name = $( this ).data( 'work-name' );
+        workItems.removeClass( 'work-item--active' ).addClass( 'work-item--leaving' );
+        workTransition.addClass( 'work__transition--animate' );
+        setTimeout( function() {
+            workItems.addClass( 'hidden' );
+            workTransition.removeClass( 'work__transition--animate' );
+            workItems.each( function( index, item ) {
+                item = $( item );
+                if ( item.data( 'work-name' ) == name ) {
+                    item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
+                }
+            } );
+        }, 700 );
+
+    } );
+
 } )();
 
 ( function() {
@@ -792,7 +813,7 @@
             $( 'canvas' ).closest( '.js-section' ).css( {
                 backgroundColor: bgColour.hex
             } );
-            window.setFavicon( bgColour.hex );
+            // window.setFavicon( bgColour.hex );
             numSets = ( ( Math.random() * vm.numSets ) + 1 ).toFixed( 0 );
             stroke = ( Math.random() > 0.5 );
             numBirds = vm.numBirds;

@@ -17,9 +17,9 @@
 
 %underline {
     @extend %pseudo-element;
-    bottom: gutter( -0.25 );
+    bottom: 0;
     left: 0;
-    height: 2px;
+    height: 1px;
     width: 100%;
     background: $text-colour;
     margin: 0 auto;
