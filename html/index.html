@@ -41,7 +41,7 @@
                             <h3 class="h5 text-flat-green-1 rhythm-m-1">ABOUT</h3>
                             <h2 class="h1 h1--big text-white text-weight-bold"><span>J</span>ozef Maxted</h2>
                             <div class="small-divider bg-flat-green-1 rhythm-m-2"></div>
-                            <p class="text-white h2 rhythm-m-1">Hi, I'm Jozef, a <strong>creative full-stack web developer</strong> based in <strong>Brighton</strong>. I have been building websites since 2008.</p>
+                            <p class="text-white h2 rhythm-m-1-half">Hi, I'm Jozef, a <strong>creative full-stack web developer</strong> based in <strong>Brighton</strong>. I have been building websites since 2008.</p>
                             <p class="p p--big text-white rhythm-m-1">I have a passion for web technoligies and enjoy using my skills to complete projects for high profile clients at <a class="text-link text-link--white text-link--no-underline text-weight-bold" href="http://theunit.co.uk">The Unit</a>.</p>
                             <p class="p p--big text-white rhythm-m-1">As well as producing serious work for serious clients, I love experimenting with web technologies for creative purposes. Recently I have worked with chatbots, machine learning, the internet of things, and I am addicted to creating generative art (this site is perfect example).</p>
                             <p class="p p--big text-white rhythm-m-1">If it can be built using web technologies, I can build it for you. If it can't, lets try anyway!</p>
@@ -60,27 +60,25 @@
             <div class="slant-section__bottom-slant bg-black"></div>
         </section>
 
-        <section class="bg-brand-primary rhythm-p-3--top js-section" id="work">
+        <section class="bg-brand-primary rhythm-p-3--top  js-section work-section" id="work">
             <div class="contented rhythm-p-3--top">
                 <h3 class="h5 text-flat-blue-4 rhythm-m-1">WORK</h3>
                 <h2 class="h1 h1--big text-white text-weight-bold">Recent Projects</h2>
                 <div class="small-divider bg-flat-blue-4 rhythm-m-3"></div>
-
-                {%- include "partials/work.html" -%}
-
             </div><!-- /.contented -->
 
             <div class="contented rhythmic-xxl bg-flat-blue-4 work">
                 <div class="work__transition"></div>
-                <div class="grid grid--middle work-item" data-work-name="neilson">
+                <div class="work__controls text-white">
+                    <a href="#" class="text-link text-link--white text-upper js-work-trigger-previous">Previous</a> / <a href="#" class="text-link text-link--white text-upper js-work-trigger-next">Next</a>
+                </div>
+                <div class="grid grid--middle work-item work-item--active" data-work-id="1">
                     <div class="grid__item width-1/3 tablet-width-1/1">
-                        <div class="work-item__controls rhythm-m-2 text-white">
-                            <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="dinkyflop">Previous</a> / <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="fidelity">Next</a>
-                        </div>
-
-                        <h3 class="h1 text-weight-bold text-white work-item__title">Neilson Holidays</h3>
-                        <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Developer / Drupal 8 / Angular / API</h4>
-                        <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                        <div class="work-item__content">
+                            <h3 class="h1 text-weight-bold text-white work-item__title">Neilson Holidays</h3>
+                            <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Developer / Drupal 8 / Angular / API</h4>
+                            <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                        </div><!-- /.work-item__content -->
                     </div><!--
                     --><div class="grid__item width-2/3 tablet-width-1/1">
                         <div class="gutted-left-xl tablet-tight">
@@ -88,15 +86,13 @@
                         </div>
                     </div>
                 </div><!-- /.grid -->
-                <div class="grid grid--middle work-item hidden" data-work-name="fidelity">
+                <div class="grid grid--middle work-item hidden" data-work-id="2">
                     <div class="grid__item width-1/3 tablet-width-1/1">
-                        <div class="rhythm-m-2 work-item__controls text-white">
-                            <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="neilson">Previous</a> / <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="dinkyflop"> Next</a>
-                        </div>
-
-                        <h3 class="h1 text-weight-bold text-white work-item__title">Fidelity</h3>
-                        <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Frontend Developer / Backbone</h4>
-                        <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                        <div class="work-item__content">
+                            <h3 class="h1 text-weight-bold text-white work-item__title">Fidelity</h3>
+                            <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Frontend Developer / Backbone</h4>
+                            <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                        </div><!-- /.work-item__content -->
                     </div><!--
                     --><div class="grid__item width-2/3 tablet-width-1/1">
                         <div class="gutted-left-xl tablet-tight">
@@ -104,15 +100,13 @@
                         </div>
                     </div>
                 </div><!-- /.grid -->
-                <div class="grid grid--middle work-item hidden" data-work-name="dinkyflop">
+                <div class="grid grid--middle work-item hidden" data-work-id="3">
                     <div class="grid__item width-1/3 tablet-width-1/1">
-                        <div class="rhythm-m-2 work-item__controls">
-                            <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="fidelity">Previous</a> <a href="#" class="text-link text-link--white text-upper js-work-trigger" data-work-name="neilson">/ Next</a>
-                        </div>
-
-                        <h3 class="h1 text-weight-bold text-white work-item__title">Pink Floyd</h3>
-                        <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Developer / Drupal 8 / Angular / API</h4>
-                        <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                        <div class="work-item__content">
+                            <h3 class="h1 text-weight-bold text-white work-item__title">Pink Floyd</h3>
+                            <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Canvas &amp; CSS Animations</h4>
+                            <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Canvas and CSS animations on the new promotional site for Pink Floyd's album Endless River. I had to create custom intro animations reflecting the album artwork that had been designed for the Endless River.</p>
+                        </div><!-- /.work-item__content -->
                     </div><!--
                     --><div class="grid__item width-2/3 tablet-width-1/1">
                         <div class="gutted-left-xl tablet-tight">
@@ -122,19 +116,6 @@
                 </div><!-- /.grid -->
             </div><!-- /.contented -->
 
-        </section>
-
-        <section class="bg-brand-primary rhythmic gutted js-section" id="contact">
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
-            <h1 class="h1 text-white">Get in contact</h1>
         </section>
 
         <script src="assets/js/vendor.js"></script>

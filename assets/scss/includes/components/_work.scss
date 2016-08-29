@@ -1,6 +1,6 @@
 .work {
     position: relative;
-    box-shadow: 0px -10px 0px 0px rgba( 0, 0, 0, 0.1 );
+    box-shadow: 0px -10px 0px 0px rgba( 0, 0, 0, 0.1 ), 0px 10px 0px 0px rgba( 0, 0, 0, 0.1 );
     overflow: hidden;
 }
 
@@ -23,13 +23,23 @@
 
     .work__controls {
         position: absolute;
-        top: 0px;
+        top: rhythm( 3 );
+        z-index: 5;
+
+        @include respond-to( tablet ) {
+            top: rhythm( 2 );
+            right: gutter( 2 );
+        }
     }
 
 .work-item {
     position: relative;
     z-index: 2;
 }
+
+    .work-item__content {
+        padding-top: rhythm( 3 );
+    }
 
     .work-item__title {
         // transition: all 0.5s ease;

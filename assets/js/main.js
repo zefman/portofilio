@@ -295,9 +295,15 @@
     // Work slider
     var workItems = $( '.work-item' );
     var workTransition = $( '.work__transition' );
-    $( '.js-work-trigger' ).on( 'click', function( event ) {
+    $( '.js-work-trigger-next' ).on( 'click', function( event ) {
         event.preventDefault();
-        var name = $( this ).data( 'work-name' );
+        var activeID = parseInt( $( '.work-item--active' ).data( 'work-id' ) );
+        var nextID   = activeID + 1;
+
+        if ( nextID > workItems.length ) {
+            nextID = 1;
+        }
+
         workItems.removeClass( 'work-item--active' ).addClass( 'work-item--leaving' );
         workTransition.addClass( 'work__transition--animate' );
         setTimeout( function() {
@@ -305,7 +311,31 @@
             workTransition.removeClass( 'work__transition--animate' );
             workItems.each( function( index, item ) {
                 item = $( item );
-                if ( item.data( 'work-name' ) == name ) {
+                if ( item.data( 'work-id' ) == nextID ) {
+                    item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
+                }
+            } );
+        }, 700 );
+
+    } );
+
+    $( '.js-work-trigger-previous' ).on( 'click', function( event ) {
+        event.preventDefault();
+        var activeID = parseInt( $( '.work-item--active' ).data( 'work-id' ) );
+        var nextID   = activeID - 1;
+
+        if ( nextID < 1 ) {
+            nextID = workItems.length;
+        }
+
+        workItems.removeClass( 'work-item--active' ).addClass( 'work-item--leaving' );
+        workTransition.addClass( 'work__transition--animate' );
+        setTimeout( function() {
+            workItems.addClass( 'hidden' );
+            workTransition.removeClass( 'work__transition--animate' );
+            workItems.each( function( index, item ) {
+                item = $( item );
+                if ( item.data( 'work-id' ) == nextID ) {
                     item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
                 }
             } );
