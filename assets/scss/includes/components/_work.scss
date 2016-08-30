@@ -117,4 +117,9 @@
         box-shadow: 0px 0px 0px 10px rgba( 0, 0, 0, 0.1 );
         @include adjust-font-size-to( 30px );
         margin-left: gutter( 1 );
+        transition: box-shadow 0.5s ease;
     }
+
+        .work-menu__item--active {
+            box-shadow: 0px 0px 0px 10px $flat-blue-4;
+        }

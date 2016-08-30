@@ -294,6 +294,7 @@
 
     // Work slider
     var workItems = $( '.work-item' );
+    var workMenuItems = $( '.work-menu__item' );
     var workTransition = $( '.work__transition' );
     $( '.js-work-trigger-next' ).on( 'click', function( event ) {
         event.preventDefault();
@@ -309,10 +310,17 @@
         setTimeout( function() {
             workItems.addClass( 'hidden' );
             workTransition.removeClass( 'work__transition--animate' );
+            workMenuItems.removeClass( 'work-menu__item--active' );
             workItems.each( function( index, item ) {
                 item = $( item );
                 if ( item.data( 'work-id' ) == nextID ) {
                     item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
+                }
+            } );
+            workMenuItems.each( function( index, item ) {
+                item = $( item );
+                if ( item.data( 'work-id' ) == nextID ) {
+                    item.addClass( 'work-menu__item--active' );
                 }
             } );
         }, 700 );
@@ -333,10 +341,17 @@
         setTimeout( function() {
             workItems.addClass( 'hidden' );
             workTransition.removeClass( 'work__transition--animate' );
+            workMenuItems.removeClass( 'work-menu__item--active' );
             workItems.each( function( index, item ) {
                 item = $( item );
                 if ( item.data( 'work-id' ) == nextID ) {
                     item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
+                }
+            } );
+            workMenuItems.each( function( index, item ) {
+                item = $( item );
+                if ( item.data( 'work-id' ) == nextID ) {
+                    item.addClass( 'work-menu__item--active' );
                 }
             } );
         }, 700 );
@@ -350,6 +365,8 @@
 
         workItems.removeClass( 'work-item--active' ).addClass( 'work-item--leaving' );
         workTransition.addClass( 'work__transition--animate' );
+        workMenuItems.removeClass( 'work-menu__item--active' );
+        $( event.target ).addClass( 'work-menu__item--active' );
         setTimeout( function() {
             workItems.addClass( 'hidden' );
             workTransition.removeClass( 'work__transition--animate' );
