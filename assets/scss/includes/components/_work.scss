@@ -28,7 +28,7 @@
 
         @include respond-to( tablet ) {
             top: rhythm( 2 );
-            right: gutter( 2 );
+            //right: gutter( 2 );
         }
     }
 
@@ -104,6 +104,10 @@
 .work-menu {
     padding-bottom: rhythm( 3.75 );
     text-align: right;
+
+    @include respond-to( tablet ) {
+        text-align: left;
+    }
 }
 
     .work-menu__item {
@@ -118,6 +122,11 @@
         @include adjust-font-size-to( 30px );
         margin-left: gutter( 1 );
         transition: box-shadow 0.5s ease;
+
+        @include respond-to( tablet ) {
+            margin-left: 0;
+            margin-right: gutter( 1 );
+        }
     }
 
         .work-menu__item--active {
