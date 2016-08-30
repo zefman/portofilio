@@ -1,0 +1,81 @@
+<html>
+    <head></head>
+    <body>
+        <script src="assets/js/vendor.js"></script>
+        <script type="text/javascript">
+        (function( $ ){
+
+          $.fn.boner = function(options) {
+
+            var defaults = {
+              'bSize'  : '10',
+              'bSpeed' : '50'
+            };
+
+            var options =  $.extend(defaults, options);
+
+            this.each(function() {
+
+              var $this = $(this);
+
+              var reverse = false;
+
+              var balls = "B";
+
+              var shaftSegment = ":";
+
+              var tip = "|>              ---                  ---               ---";
+
+              var size = 0;
+
+              function grow() {
+
+                var shaft = "";
+
+                if(size > options.bSize) {
+                    reverse = true;
+                } else if (size < 1) {
+                    reverse = false;
+                }
+
+                if(reverse == false) {
+
+                    for (i=0;i<size;i++) {
+                        shaft += shaftSegment;
+                    }
+
+                    $this.html(balls + shaft + tip);
+
+                    size++;
+
+                } else if (reverse == true) {
+
+                    for (i=0;i<size;i++) {
+                        shaft += shaftSegment;
+                    }
+
+                    $this.html(balls + shaft + tip);
+
+                    size--;
+
+                }
+
+              }
+
+              setInterval(grow, options.bSpeed);
+
+            });
+
+          };
+
+          $(document).ready( function() {
+                $("body").boner({
+                    bSize : 40,
+                    bSpeed : 1
+                });
+            });
+        })( jQuery );
+
+        </script>
+    </body>
+</html>

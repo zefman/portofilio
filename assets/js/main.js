@@ -343,4 +343,24 @@
 
     } );
 
+    $( '.js-work-select' ).on( 'click', function( event ) {
+        event.preventDefault();
+        var activeID = parseInt( $( '.work-item--active' ).data( 'work-id' ) );
+        var nextID   = parseInt( $( event.target ).data( 'work-id' ) );
+
+        workItems.removeClass( 'work-item--active' ).addClass( 'work-item--leaving' );
+        workTransition.addClass( 'work__transition--animate' );
+        setTimeout( function() {
+            workItems.addClass( 'hidden' );
+            workTransition.removeClass( 'work__transition--animate' );
+            workItems.each( function( index, item ) {
+                item = $( item );
+                if ( item.data( 'work-id' ) == nextID ) {
+                    item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
+                }
+            } );
+        }, 700 );
+
+    } );
+
 } )();
