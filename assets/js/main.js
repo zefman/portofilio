@@ -14,9 +14,9 @@
     var needsUpdate    = false;
     var navFixed       = false;
 
-    // $window.on( 'scroll', rotateLogo );
     $window.on( 'scroll', throttle( updateOffset, 16 ) );
     $window.on( 'scroll', debounce( stopUpdate, 200 ) );
+    $window.on( 'resize', debounce( recalc, 200 ) );
     function updateOffset() {
         if ( needsUpdate === false ) {
             needsUpdate = true;
@@ -29,6 +29,15 @@
 
     function stopUpdate() {
         needsUpdate = false;
+    }
+
+    /**
+     * Redefine the variables that are effected by a window resize
+     */
+    function recalc() {
+        finishedOffset = $logoNav.offset().top - $siteNav.height() + 15;
+        maxWidth       = $window.width();
+        minWidth       = $logo.outerWidth();
     }
 
     function rotateLogo() {
@@ -296,6 +305,7 @@
     var workItems = $( '.work-item' );
     var workMenuItems = $( '.work-menu__item' );
     var workTransition = $( '.work__transition' );
+
     $( '.js-work-trigger-next' ).on( 'click', function( event ) {
         event.preventDefault();
         var activeID = parseInt( $( '.work-item--active' ).data( 'work-id' ) );
@@ -323,6 +333,7 @@
                     item.addClass( 'work-menu__item--active' );
                 }
             } );
+            $(window).trigger('resize');
         }, 700 );
 
     } );
@@ -354,6 +365,7 @@
                     item.addClass( 'work-menu__item--active' );
                 }
             } );
+            $(window).trigger('resize');
         }, 700 );
 
     } );
@@ -376,8 +388,17 @@
                     item.removeClass( 'hidden' ).removeClass( 'work-item--leaving' ).addClass( 'work-item--active' );
                 }
             } );
+            $(window).trigger('resize');
         }, 700 );
 
+    } );
+
+    $( window ).on( 'load', function() {
+        $(".owl-carousel").owlCarousel( {
+            items: 1,
+            loop: true,
+            lazyLoad: true,
+        } );
     } );
 
 } )();

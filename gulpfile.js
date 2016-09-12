@@ -63,10 +63,17 @@ gulp.task('connect', function() {
 gulp.task( 'vendor', function() {
     gulp.src( [
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/victor/build/victor.min.js'
+        'bower_components/victor/build/victor.min.js',
+        'bower_components/owl.carousel/dist/owl.carousel.min.js',
     ] )
         .pipe( concat( 'vendor.js' ) )
         .pipe( gulp.dest( './dev/assets/js/' ) );
+
+    gulp.src( [
+        'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
+    ] )
+        .pipe( concat( 'vendor.css' ) )
+        .pipe( gulp.dest( './dev/assets/css/' ) );
 } );
 
 gulp.task('deploy', [], function () {
