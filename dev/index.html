@@ -30,7 +30,6 @@
                 <ul class="rhythmic-l list list--inline tablet-hidden">
                     <li class="list__item gutted-right-xs animate animate--fade-in-up animate--delay-2"><a class="h5 text-link text-link--no-underline text-link--black" href="#about">About</a></li>
                     <li class="list__item gutted-right-xs animate animate--fade-in-up animate--delay-1"><a class="h5 text-link text-link--no-underline text-link--black" href="#work">Work</a></li>
-                    <li class="list__item gutted-right-xs animate animate--fade-in-up animate--delay-1"><a class="h5 text-link text-link--no-underline text-link--black" href="#work">Blog</a></li>
                     <li class="list__item animate animate--fade-in-up"><a class="h5 text-link text-link--no-underline text-link--black" href="#contact">Contact</a></li>
                 </ul>
                 <a class="burger text-link--no-underline text-link--black animate animate--scale-in js-menu-trigger" href="#">
@@ -52,7 +51,6 @@
         <ul class="rhythmic-l list list--inline text-center vert-hoz-centre">
             <li class="list__item animate animate--scale-in animate--delay-2 block rhythm-m-1"><a class="h1 js-mobile-menu-link text-link text-link--no-underline text-link--white" href="#about">About</a></li>
             <li class="list__item animate animate--scale-in animate--delay-1 block rhythm-m-1"><a class="h1 js-mobile-menu-link text-link text-link--no-underline text-link--white" href="#work">Work</a></li>
-            <li class="list__item animate animate--scale-in animate--delay-1 block rhythm-m-1"><a class="h1 js-mobile-menu-link text-link text-link--no-underline text-link--white" href="#work">Blog</a></li>
             <li class="list__item animate animate--scale-in block rhythm-m-1"><a class="h1 js-mobile-menu-link text-link text-link--no-underline text-link--white" href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -165,6 +163,11 @@
                                     3
                                 </a>
                             </li>
+                            <li class="list__item">
+                                <a href="#" class="bg-flat-blue-4 work-menu__item js-work-select" data-work-id="4" data-title="Smartbots">
+                                    4
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -188,9 +191,8 @@
                         --><div class="grid__item width-2/3 tablet-width-1/1">
                             <div class="gutted-left-xl tablet-tight">
                                 <div class="work-item__image  owl-carousel">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/neilson/neilson-homepage.jpg">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/neilson/neilson-accommodation.jpg">
                                 </div>
                             </div>
                         </div>
@@ -200,15 +202,14 @@
                             <div class="work-item__content">
                                 <h3 class="h1 text-weight-bold text-white work-item__title">Fidelity</h3>
                                 <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Lead Frontend Developer / Backbone</h4>
-                                <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer for the build on the new Neilson webiste. This project was one of the first complex sites to be built with Drupal 8, and required lots of custom module developement to integrate with ATCORE, Neilson's booking engine.</p>
+                                <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer on a site for Fidelity International hoping to appeal to millennials looking to invest. This project was purely frontend based and included frontend component library, as well as a marketing site with interactive graphs and tools built with Backbone, helping users to see how much they could save.</p>
                             </div><!-- /.work-item__content -->
                         </div><!--
                         --><div class="grid__item width-2/3 tablet-width-1/1">
                             <div class="gutted-left-xl tablet-tight">
                                 <div class="work-item__image owl-carousel">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/fidelity/fidelity-home.jpg">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/fidelity/fidelity-graph.jpg">
                                 </div>
                             </div>
                         </div>
@@ -224,9 +225,25 @@
                         --><div class="grid__item width-2/3 tablet-width-1/1">
                             <div class="gutted-left-xl tablet-tight">
                                 <div class="work-item__image owl-carousel">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
-                                    <img class="block owl-lazy" data-src="http://unsplash.it/900/600">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/pink-floyd/home.jpg">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/pink-floyd/intro.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.grid -->
+                    <div class="grid grid--middle work-item hidden" data-work-id="4">
+                        <div class="grid__item width-1/3 tablet-width-1/1">
+                            <div class="work-item__content">
+                                <h3 class="h1 text-weight-bold text-white work-item__title">Smartbots</h3>
+                                <h4 class="h6 text-brand-primary rhythm-m-2 work-item__skills">Node / Angular / SVG / Chatbot</h4>
+                                <p class="p text-white rhythm-m-1 tablet-rhythm-m-2 work-item__description">Lead developer on a chatbot powered site aimed to educate about chatbots. The chat interface was built using AngularJS talking to a node backend powered by API.AI. We also produced fun svg animations to decorate the site.</p>
+                            </div><!-- /.work-item__content -->
+                        </div><!--
+                        --><div class="grid__item width-2/3 tablet-width-1/1">
+                            <div class="gutted-left-xl tablet-tight">
+                                <div class="work-item__image owl-carousel">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/smartbots/smartbots-start.png">
+                                    <img class="block owl-lazy" data-src="/assets/images/work/smartbots/smartbots-holiday.jpg">
                                 </div>
                             </div>
                         </div>
@@ -239,23 +256,24 @@
         <section class="bg-brand-primary rhythmic-xxl" id="contact">
 
             <div class="contented">
-                <h3 class="h5 text-flat-blue-4 rhythm-m-1 text-upper">Contact</h3>
-                <h2 class="h1 h1--big text-white text-weight-bold">Talk to me</h2>
-                <div class="small-divider bg-flat-blue-4 rhythm-m-3"></div>
 
-                <p class="text-white h2 rhythm-m-2 width-1/2 tablet-width-1/1">Feel free to <strong>get in touch</strong> if you have an interesting project you would like to discuss.</p>
-
-                <div class="grid">
+                <div class="grid grid--middle">
                     <div class="grid__item width-1/2 tablet-width-1/1">
-                        <h4 class="p p--big text-white">Email:</h4>
-                        <a class="h4 text-weight-bold text-link text-link--no-underline text-link--black rhythm-m-1 inline-block" href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#106;&#111;&#122;&#101;&#102;&#109;&#097;&#120;&#116;&#101;&#100;&#046;&#099;&#111;&#046;&#117;&#107;">&#104;&#101;&#108;&#108;&#111;&#064;&#106;&#111;&#122;&#101;&#102;&#109;&#097;&#120;&#116;&#101;&#100;&#046;&#099;&#111;&#046;&#117;&#107;</a>
+                        <h3 class="h5 text-flat-blue-4 rhythm-m-1 text-upper">Contact</h3>
+                        <h2 class="h1 h1--big text-white text-weight-bold">Talk to me</h2>
+                        <div class="small-divider bg-flat-blue-4 rhythm-m-3"></div>
+
+                        <p class="text-white h2 rhythm-m-2">Feel free to <strong>get in touch</strong> if you have an interesting project you would like to discuss.</p>
                     </div><!--
                     --><div class="grid__item width-1/2 tablet-width-1/1">
                         <h4 class="p p--big text-white">Phone:</h4>
-                        <a class="h4 text-weight-bold text-link text-link--no-underline text-link--black rhythm-m-1 inline-block" href="tel:07943250621">07943 250621</a>
+                        <a class="h4 text-weight-bold text-link text-link--no-underline text-link--black rhythm-m-0-half inline-block" href="tel:07943250621">07943 250621</a>
+                        <h4 class="p p--big text-white">Email:</h4>
+                        <a class="h4 text-weight-bold text-link text-link--no-underline text-link--black rhythm-m-1 inline-block" href="mailto:&#104;&#101;&#108;&#108;&#111;&#064;&#106;&#111;&#122;&#101;&#102;&#109;&#097;&#120;&#116;&#101;&#100;&#046;&#099;&#111;&#046;&#117;&#107;">&#104;&#101;&#108;&#108;&#111;&#064;&#106;&#111;&#122;&#101;&#102;&#109;&#097;&#120;&#116;&#101;&#100;&#046;&#099;&#111;&#046;&#117;&#107;</a>
+                        <h4 class="p p--big text-white">Twitter:</h4>
+                        <a class="h4 text-weight-bold text-link text-link--no-underline text-link--black rhythm-m-1 inline-block" href="https://twitter.com/jozefmaxted">@jozefmaxted</a>
                     </div><!--
                     --><div class="grid__item width-1/2">
-                    <h4 class="p p--big text-white">Social:</h4>
 
                     </div>
                 </div>

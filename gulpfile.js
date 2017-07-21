@@ -56,7 +56,8 @@ gulp.task( 'nunjucks', function() {
 gulp.task('connect', function() {
   connect.server({
       root: './dev',
-      livereload: true
+      livereload: true,
+      port: 8888
   });
 });
 
