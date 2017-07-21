@@ -46,8 +46,14 @@ gulp.task( 'js', function() {
         .pipe( connect.reload() );
 } );
 
+gulp.task( 'petridish', function() {
+    return gulp.src( './assets/petridish/**/*' )
+        .pipe( gulp.dest( './dev/assets/petridish' ) )
+        .pipe( connect.reload() );
+} );
+
 gulp.task( 'nunjucks', function() {
-    return gulp.src( './html/*.html' )
+    return gulp.src( './html/**/*.html' )
         .pipe( nunjucks.compile() )
         .pipe( gulp.dest( './dev' ) )
         .pipe( connect.reload() );
@@ -80,12 +86,12 @@ gulp.task( 'vendor', function() {
 gulp.task('deploy', [], function () {
     return surge( {
         project: './dev',         // Path to your static build directory
-        domain: 'jozefm.surge.sh'  // Your domain or Surge subdomain
+        domain: 'jozefmaxted.co.uk'  // Your domain or Surge subdomain
     } );
 } );
 
 // Compile and watch for changes (no server)
-gulp.task( 'watch', [ 'css', 'js', 'vendor', 'nunjucks', 'images' ], function() {
+gulp.task( 'watch', [ 'css', 'js', 'vendor', 'nunjucks', 'images', 'petridish' ], function() {
     gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
     gulp.watch( "./assets/js/**/*.js", [ 'js' ] );
     gulp.watch( "./assets/images/**/*", [ 'images' ] );
