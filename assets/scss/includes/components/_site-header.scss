@@ -1,8 +1,16 @@
 .site-header {
     text-align: center;
     position: relative;
-    // background: $brand-primary;
 }
+
+    .site-header__cta {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX( -50% );
+        width: 100%;
+        opacity: 0.3;
+    }
 
     .site-strapline {
         position: absolute;
