@@ -99,4 +99,4 @@ gulp.task( 'watch', [ 'css', 'js', 'vendor', 'nunjucks', 'images', 'petridish' ]
 } );
 
 // Compile
-gulp.task( 'default', [ 'watch', 'connect' ] );
+gulp.task('default', [ 'css', 'js', 'vendor', 'nunjucks', 'images', 'petridish'  ] );
