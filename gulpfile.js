@@ -70,7 +70,7 @@ gulp.task('connect', function() {
 gulp.task( 'vendor', function() {
     gulp.src( [
         'node_modules/jquery/dist/jquery.min.js',
-        // 'node_modules/victor/index.js',
+        'assets/victor.min.js',
         'node_modules/owl.carousel/dist/owl.carousel.min.js',
     ] )
         .pipe( concat( 'vendor.js' ) )
