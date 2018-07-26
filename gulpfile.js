@@ -70,7 +70,7 @@ gulp.task('connect', function() {
 gulp.task( 'vendor', function() {
     gulp.src( [
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/victor/index.js',
+        // 'node_modules/victor/index.js',
         'node_modules/owl.carousel/dist/owl.carousel.min.js',
     ] )
         .pipe( concat( 'vendor.js' ) )
@@ -89,7 +89,7 @@ gulp.task('deploy', [], function () {
         domain: 'jozefmaxted.co.uk'  // Your domain or Surge subdomain
     } );
 } );
-
+gulp
 // Compile and watch for changes (no server)
 gulp.task( 'watch', [ 'css', 'js', 'vendor', 'nunjucks', 'images', 'petridish' ], function() {
     gulp.watch( "./assets/scss/**/*.scss", [ 'css' ] );
